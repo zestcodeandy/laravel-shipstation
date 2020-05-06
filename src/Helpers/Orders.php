@@ -40,4 +40,13 @@ class Orders extends Endpoint
 
         return isset($count->total) ? $count->total : null;
     }
+
+    public function awaitingPaymentCount()
+    {
+        $count = $this->get([
+            'orderStatus' => 'awaiting_payment'
+        ]);
+
+        return isset($count->total) ? $count->total : null;
+    }
 }
