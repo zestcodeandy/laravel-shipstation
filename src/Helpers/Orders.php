@@ -41,6 +41,13 @@ class Orders extends Endpoint
         return isset($count->total) ? $count->total : null;
     }
 
+    public function list()
+    {
+        $count = $this->get();
+
+        return $count;
+    }
+
     public function awaitingPaymentCount()
     {
         $count = $this->get([
