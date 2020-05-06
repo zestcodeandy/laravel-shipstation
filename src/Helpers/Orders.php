@@ -41,7 +41,7 @@ class Orders extends Endpoint
         return isset($count->total) ? $count->total : null;
     }
 
-    public function list((array) $filter = null)
+    public function list($filter = null)
     {
         $count = $this->get($filter);
 
